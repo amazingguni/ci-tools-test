@@ -3,15 +3,14 @@ python:
   - "3.5"
 install:
   - pip install -r requirements.txt
-script:
-  - python -m pytest
-  - sleep 30
-  - sleep 30
-  - sleep 30
-  - sleep 30
-  - sleep 30
-  - sleep 30
-  - sleep 30
-  - sleep 30
-  - sleep 30
-  - sleep 30
+jobs:
+  include:
+    - script: python -m pytest
+    - script: sleep 30
+    - script: sleep 30
+    - script: sleep 30
+    - script: sleep 30
+    - script: sleep 30
+    - script: sleep 30
+    - script: sleep 30
+  
