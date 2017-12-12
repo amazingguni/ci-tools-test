@@ -5,5 +5,12 @@ jobs:
       - image: circleci/python:3.6.3
     steps:
       - checkout
-      - run: pip install -r requirements.txt
-      - run: python -m pytest
+      - run: 
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - run: 
+          command: |
+            . venv/bin/activate
+            python -m pytest
