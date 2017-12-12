@@ -5,3 +5,13 @@ install:
   - pip install -r requirements.txt
 script:
   - python -m pytest
+  - sleep 1
+  - sleep 1
+  - sleep 1
+  - sleep 1
+  - sleep 1
+  - sleep 1
+  - sleep 1
+  - sleep 1
+  - sleep 1
+  - sleep 1
