@@ -4,6 +4,9 @@ python:
   - 3.5
 
 build:
-  ci:
+  one:
+    - pip install -r requirements.txt
+    - python -m pytest
+  two:
     - pip install -r requirements.txt
     - python -m pytest
