@@ -5,12 +5,8 @@ install:
   - pip install -r requirements.txt
 jobs:
   include:
-    - script: python -m pytest
-    - script: sleep 30
-    - script: sleep 30
-    - script: sleep 30
-    - script: sleep 30
-    - script: sleep 30
-    - script: sleep 30
-    - script: sleep 30
+    - stage: one
+      script: python -m pytest
+    - stage: two
+      script: python -m pytest
   
