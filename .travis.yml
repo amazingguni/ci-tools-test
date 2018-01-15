@@ -9,4 +9,3 @@ jobs:
       script: python -m pytest
     - stage: two
       script: python -m pytest
-  
