@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  one:
     docker:
       - image: circleci/python:3.6.3
     steps:
@@ -14,3 +14,24 @@ jobs:
           command: |
             . venv/bin/activate
             python -m pytest
+  two:
+    docker:
+      - image: circleci/python:3.6.3
+    steps:
+      - checkout
+      - run: 
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - run: 
+          command: |
+            . venv/bin/activate
+            python -m pytest
+
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
